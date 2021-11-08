@@ -1,4 +1,3 @@
-/* reseteamos todo el navegador */
 *{
     padding: 0;
     margin: 0;
@@ -7,8 +6,67 @@
     box-sizing: border-box;
 }
 
-/*Ahora creamos nuestros estilos*/
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(22, 21, 21);
+    transition: all .5s ease;
+}
 
-/*Primero vamos a crear el nav y lo vamos a hacer como SideBar, es decir
-El menú va a estar al costado*/
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: rgb(29, 28, 28);
+    user-select: none;
+}
 
+.sidebar ul{
+    margin-top: 50px;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(14, 13, 13);
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+#check {
+    display: none;
+}
+
+label #btn {
+    position: absolute;
+    cursor: pointer;
+    left: 40px;
+    top:  25px;
+    font-size: 35px;
+    color: white;
+    background: rgb(22, 21, 21);
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all .5s;
+    z-index: 1;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    pointer-events: none;
+}
