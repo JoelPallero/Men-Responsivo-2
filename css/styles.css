@@ -1,72 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400;1,700&display=swap');
+
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.sidebar{
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: rgb(22, 21, 21);
-    transition: all .5s ease;
+body{
+    margin-left: 80px;
+
 }
 
-.sidebar header{
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    line-height: 70px;
-    background: rgb(29, 28, 28);
-    user-select: none;
-}
-
-.sidebar ul{
-    margin-top: 50px;
-}
-
-.sidebar ul a{
-    display: block;
-    height: 100%;
+header{
     width: 100%;
-    line-height: 65px;
+    height: 80px;
+    background-color: #f5f5f5;
+    display: flex; /*PAra colocar el bar al centro*/
+    align-items: center; /*coloco el bar al centro*/
+    position: fixed;
+    z-index: 200; /*Para que siempr esté por encima de todos*/
+}
+
+.icon_menu{
+    width: 50px;
+    height: 100%;
+    display: flex; /*van de la mano con justify-content y align-items*/
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon_menu i {
     font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.sidebar {
+    width: 80px;
+    height: 100%;
+    background-color: #1783db;
+    position: fixed;
+    top: 0;
+    left: 0;
     color: white;
-    padding-left: 40px;
-    box-sizing: border-box;
-    border-top: 1px solid rgb(14, 13, 13);
+    font-size: 18px;
+    z-index: 300;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #1783db;
 }
 
-ul li:hover a {
-    padding-left: 50px;
-}
+/* Ocultar Scroll   */
 
-#check {
+/*Chrome, Safari y Opera*/
+.sidebar::-webkit-scrollbar{
     display: none;
 }
 
-label #btn {
+/*Firefox, Explorer, Edge*/
+.sidebar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*---------------*/
+
+.name_page{
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.name_page i {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.menu_options {
+    padding: 20px 30px;
     position: absolute;
-    cursor: pointer;
-    left: 40px;
-    top:  25px;
-    font-size: 35px;
+    top: 80px;
+}
+
+.menu_options a {
+    color: #ffffffb2;
+    cursor: default;
+    display: block;
+    position: relative;
+    transition: color 300ms;
+}
+
+.menu_options a:hover {
     color: white;
-    background: rgb(22, 21, 21);
-    padding: 6px 12px;
-    border-radius: 5px;
-    transition: all .5s;
-    z-index: 1;
 }
 
-#check:checked ~ .sidebar{
-    left: 0;
+.menu_options .option{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-#check:checked ~ label #btn{
-    left: 250px;
-    pointer-events: none;
+.menu_options .option i{
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.menu_options h4{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a.selected{
+    color: #fff
+}
+
+.selected::before{
+    content: '';
+    width: 3px;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+.body_move{
+    margin-left: 250px;
+}
+
+.sidebar_move{
+    width: 250px;
 }
