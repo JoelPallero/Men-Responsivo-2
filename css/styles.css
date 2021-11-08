@@ -10,7 +10,12 @@
 
 body{
     margin-left: 80px;
+    margin-top: 80px;
     transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+main{
+    padding: 20px;
 }
 
 header{
@@ -20,6 +25,7 @@ header{
     display: flex; /*PAra colocar el bar al centro*/
     align-items: center; /*coloco el bar al centro*/
     position: fixed;
+    top: 0;
     z-index: 200; /*Para que siempr esté por encima de todos*/
 }
 
@@ -112,7 +118,7 @@ header{
     cursor: pointer;
 }
 
-.menu_options h4{
+.menu_options .option h4{
     font-weight: 600;
     cursor: pointer;
 }

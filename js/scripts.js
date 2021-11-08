@@ -1,5 +1,5 @@
 // Función del evento click
-document.getElementById("btn_open").addEventListener("click", open_menu)
+document.getElementById("btn_open").addEventListener("click", open_menu);
 
 // variables
 
@@ -19,8 +19,8 @@ function open_menu(){
 //Menu responsive
 
 if(window.innerWidth < 760){
-    body.classList.add("body_move")
-    sidebar.classList.add("sidebar_move")
+    body.classList.add("body_move");
+    sidebar.classList.add("sidebar_move");
 }
 
 window.addEventListener("resize", function(){
