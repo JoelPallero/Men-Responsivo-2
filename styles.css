@@ -1,0 +1,14 @@
+/* reseteamos todo el navegador */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*Ahora creamos nuestros estilos*/
+
+/*Primero vamos a crear el nav y lo vamos a hacer como SideBar, es decir
+El menú va a estar al costado*/
+
